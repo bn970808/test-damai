@@ -1,0 +1,36 @@
+@charset "utf-8"; /* 声明编码集 */
+$red: #ff1268;
+$f8: #f8f8f8;
+$fff: #fff;
+$border: #ebebeb;
+$c9b: #9b9b9b;
+$hand: pointer;
+.sidebar {
+    background: #fff;
+    border: 1px solid $border;
+    width: 80px;
+    position: fixed;
+    top: 72.5%;
+    right: 10px;
+    margin-top: -105px;
+    z-index: 9999;
+    .item {
+        height: 60px;
+        border-bottom: 1px solid $border;
+        text-align: center;
+        padding-top: 10px;
+        color: #111;
+        font-size: 12px;
+        position: relative;
+        cursor: $hand;
+        box-sizing: content-box;
+        div {
+            background: url(https://img.alicdn.com/tfs/TB1u1U9xmzqK1RjSZFHXXb3CpXa-64-180.png) no-repeat;
+            margin: 0 auto;
+            width: 32px;
+            height: 29px;
+            background-size: 100%;
+            margin-bottom: 5px;
+        }
+    }
+}

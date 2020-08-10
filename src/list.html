@@ -1,0 +1,59 @@
+<!--
+ * @Author: DongBingnan
+ * @Date: 2020-08-10 13:59:09
+ * @LastEditors: DongBingnan
+ * @LastEditTime: 2020-08-10 16:05:39
+ * @Description: file content
+ * @FilePath: \wampRoot\damaiwang\src\list.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/list.css">
+    <link rel="stylesheet" href="css/foot.css">
+    <link rel="stylesheet" href="css/head.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+
+    <script src="script/jquery-1.10.1.min.js"></script>
+</head>
+
+<body>
+    <script src="script/list.js"></script>
+    <!-- header -->
+    <div class="header"></div>
+    <script>$(".header").load("./head.html")</script>
+    <!-- content -->
+    <div class="sort main-sort">
+        <div class="sort_fl">
+            <span class="sort-item">相关度排序</span>
+            <span class="sort-item sort-item-active">推荐排序</span>
+            <span class="sort-item">最近开场</span>
+            <span class="sort-item">最新上架</span>
+        </div>
+        <div class="pagination-top sort_fr">
+            <i>&lt;</i>
+            <div class="sort__num">
+                <span>1</span>/
+                <span>9</span>
+            </div>
+            <i>&gt;</i>
+        </div>
+    </div>
+    <div class="itembox">
+
+    </div>
+    <!-- footer -->
+    <div class="footer"></div>
+    <script>$(".footer").load("./foot.html")</script>
+    <!-- sidebar -->
+    <div class="sidebar"></div>
+    <script>$(".sidebar").load("./sidebar.html")</script>
+</body>
+
+</html>

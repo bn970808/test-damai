@@ -1,0 +1,41 @@
+@charset "utf-8"; /* 声明编码集 */
+/*!herder*/
+.header {
+    height: 90px;
+    img {
+        float: left;
+        margin-top: 24px;
+        width: 108px;
+        height: 48px;
+    }
+}
+/*!content*/
+body {
+    background: #f8f8f8;
+}
+.content {
+    background: #fff;
+    padding: 25px 475px;
+    width: 250px;
+    margin: auto;
+    p {
+        margin: 20px 0;
+    }
+    input {
+        height: 30px;
+    }
+    p:last-of-type {
+        width: 230px;
+        height: 42px;
+        background: #ff1268;
+        text-align: center;
+        margin-left: 6px;
+        border: 1px solid #ff9000;
+        border-radius: 3px;
+        font-size: 20px;
+        line-height: 42px;
+        outline: none;
+        color: #fff;
+        cursor: pointer;
+    }
+}

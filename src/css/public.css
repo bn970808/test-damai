@@ -1,0 +1,17 @@
+@charset "utf-8"; /* 声明编码集 */
+/* 版心 */
+.main {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 清除浮动 */
+.clearFixed:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}

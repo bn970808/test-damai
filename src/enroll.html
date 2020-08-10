@@ -1,0 +1,53 @@
+<!--
+ * @Author: DongBingnan
+ * @Date: 2020-08-10 11:25:01
+ * @LastEditors: DongBingnan
+ * @LastEditTime: 2020-08-10 14:08:48
+ * @Description: file content
+ * @FilePath: \wampRoot\damaiwang\src\enroll.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/enroll.css">
+    <link rel="stylesheet" href="css/foot.css">
+    <script src="script/jquery-1.10.1.min.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="main"><a href="http://localhost/damaiwang/dist/index1.html"><img
+                    src="https://img.alicdn.com/tfs/TB19yBbRSzqK1RjSZFLXXcn2XXa-230-104.png" alt=""></a></div>
+    </div>
+    <!-- content -->
+    <div class="content">
+        <div class="box">
+            <form action="" method="post">
+                <p><label for="">用户账号：</label><input type="text" class="username" name="username"
+                        placeholder="请输入账号"><span></span></p>
+                <p><label for="">用户密码：</label><input type="password" class="password" name="password"
+                        placeholder="请输入密码"><span></span></p>
+                <p><label for="">确认密码：</label><input type="password" class="password" name="password"
+                        placeholder="请再次输入密码"><span></span></p>
+                <p><label for="">手机号码：</label><input type="text" class="phone" name="phone"
+                        placeholder="请输入手机号码"><span></span></p>
+                <p>提交注册</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer"></div>
+
+    <script>$(".footer").load("./foot.html")</script>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+@charset "utf-8"; /* 声明编码集 */
+/*!footer*/
+$red: #ff1268;
+$f8: #f8f8f8;
+$fff: #fff;
+$border: #ebebeb;
+$c9b: #9b9b9b;
+$hand: pointer;
+.footer {
+    height: 350px;
+    background: $f8;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 36px 0;
+        text-align: center;
+
+        li {
+            font-size: 13px;
+            a {
+                white-space: nowrap;
+            }
+            a:hover {
+                color: $red;
+                text-decoration: underline;
+                cursor: $hand;
+            }
+        }
+        li:nth-child(2n) {
+            padding: 0 24px;
+        }
+    }
+
+    .left {
+        float: left;
+        margin-right: 100px;
+        a {
+            float: left;
+            margin-top: 20px;
+        }
+        div {
+            float: left;
+            width: 87px;
+            text-align: center;
+            margin-left: 40px;
+            img {
+                width: 87px;
+                height: 87px;
+                margin-bottom: 8px;
+            }
+            span {
+                font-size: 14px;
+                color: #111;
+                text-align: center;
+            }
+        }
+    }
+    .right {
+        float: left;
+        .kefu {
+            padding-bottom: 10px;
+            height: 27px;
+            a {
+                float: left;
+                display: block;
+                width: 98px;
+                height: 27px;
+                line-height: 27px;
+                text-align: center;
+                background-color: $red;
+                color: $fff;
+                font-size: 14px;
+                border-radius: 20px;
+            }
+        }
+        .word {
+            padding-bottom: 6px;
+            padding-top: 0;
+            display: block;
+            height: 17px;
+            a {
+                font-size: 13px;
+                color: #111;
+                text-decoration: none;
+            }
+            a:hover {
+                color: $red;
+            }
+            li {
+                float: left;
+            }
+            li:nth-child(2n) {
+                padding: 0 15px;
+            }
+        }
+        .img {
+            padding-top: 15px;
+            a {
+                float: left;
+                img {
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
