@@ -133,6 +133,9 @@ u {
     text-decoration: none;
     cursor: pointer;
 }
+a:visited {
+    color: #111;
+}
 a:focus,
 input {
     outline: none;

@@ -3,13 +3,15 @@
  * @Author: DongBingnan
  * @Date: 2020-08-10 15:50:43
  * @LastEditors: DongBingnan
- * @LastEditTime: 2020-08-10 16:03:11
+ * @LastEditTime: 2020-08-10 20:47:38
  * @Description: file content
  * @FilePath: \wampRoot\damaiwang\php\list.php
  */
 //1.置字符编码
 header('content-type:text/html;charset=utf-8');
 
+header('Access-Control-Allow-Origin:*');
+header('Access-Control-Allow-Method:POST,GET');
 //2.数据库连接
 $conn = @new mysqli('localhost', 'root', '', 'hangzhouxx');
 if ($conn->connect_error) {
