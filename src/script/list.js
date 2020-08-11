@@ -2,7 +2,7 @@
  * @Author: DongBingnan
  * @Date: 2020-07-30 15:04:17
  * @LastEditors: DongBingnan
- * @LastEditTime: 2020-08-11 08:54:42
+ * @LastEditTime: 2020-08-11 15:46:35
  * @Description: file content
  * @FilePath: \wampRoot\damaiwang\src\script\list.js
  */
@@ -32,6 +32,12 @@
             <div class='title'>
                 <a href='./detail.html?sid=${ele.sid}'>
                     <p>${ele.title}</p>
+                </a>
+            </div>
+
+            <div class='people'>
+                <a href='./detail.html?sid=${ele.sid}'>
+                    <p>${ele.people}</p>
                 </a>
             </div>
 

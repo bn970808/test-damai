@@ -2,7 +2,7 @@
  * @Author: DongBingnan
  * @Date: 2020-08-10 11:25:01
  * @LastEditors: DongBingnan
- * @LastEditTime: 2020-08-10 14:08:48
+ * @LastEditTime: 2020-08-11 19:30:01
  * @Description: file content
  * @FilePath: \wampRoot\damaiwang\src\enroll.html
 -->
@@ -34,11 +34,13 @@
                         placeholder="请输入账号"><span></span></p>
                 <p><label for="">用户密码：</label><input type="password" class="password" name="password"
                         placeholder="请输入密码"><span></span></p>
-                <p><label for="">确认密码：</label><input type="password" class="password" name="password"
+                <p><label for="">确认密码：</label><input type="password" class="passwordII" name="password"
                         placeholder="请再次输入密码"><span></span></p>
                 <p><label for="">手机号码：</label><input type="text" class="phone" name="phone"
                         placeholder="请输入手机号码"><span></span></p>
-                <p>提交注册</p>
+
+                <p><input type="submit" value="提交注册" class='btn'></p>
+
             </form>
         </div>
     </div>
@@ -47,6 +49,7 @@
     <div class="footer"></div>
 
     <script>$(".footer").load("./foot.html")</script>
+    <script src="script/enroll.js"></script>
 
 </body>
 
