@@ -9,13 +9,39 @@
         height: 48px;
     }
 }
+/*!mark*/
+.markdiv {
+    width: 200px;
+    height: 50px;
+    position: relative;
+    top: 360px;
+    left: 1053px;
+    background: gray;
+    text-align: center;
+    line-height: 50px;
+    border: 2px solid #ff1268;
+    border-radius: 10px;
+    display: none;
+    z-index: 9999;
+
+    span {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #ccc;
+        line-height: 0;
+        cursor: pointer;
+    }
+}
 /*!content*/
 .content {
     background: linear-gradient(to right, #17073d, #17073d, #17073d);
     height: 600px;
+
     .ad {
         float: left;
         margin-top: 90px;
+        cursor: auto;
         img {
             width: 720px;
             height: 400px;

@@ -2,7 +2,7 @@
  * @Author: DongBingnan
  * @Date: 2020-08-11 11:10:54
  * @LastEditors: DongBingnan
- * @LastEditTime: 2020-08-11 16:48:51
+ * @LastEditTime: 2020-08-12 16:18:16
  * @Description: file content
  * @FilePath: \wampRoot\damaiwang\src\script\index.js
  */
@@ -17,7 +17,8 @@
             this.hover()
             this.show()
             this.top()
-            // this.rend()
+            this.denglu()
+            this.banner()
         }
         // 隐藏
         close() {
@@ -37,7 +38,6 @@
                 $('.user a').css('color', '#ff1268')
             }).on('mouseout', () => {
                 $('.user a').css('color', '#111')
-
             })
         }
         // 显示
@@ -52,40 +52,78 @@
                 $('html').animate({ scrollTop: 0 })
             })
         }
-        //渲染
-        // rend() {
-        //     $.ajax({
-        //         url: 'http://10.31.152.66/damaiwang/php/list.php'
-        //     }).done((data) => {
-        //         let $dataArr = JSON.parse(data)
-        //         let $strhtml = ''
-        //         console.log($dataArr)
-        //         $($dataArr).each((index, ele) => {
-        //             this.flag++
-        //             $strhtml += `
-        //             <a href="./list.html" target="_blank" class='box-right-item'>
-        //                     <div class='itemimg'>
-        //                         <img class='lazy'
-        //                             data-original="${ele.url}"
-        //                             alt="">
-        //                     </div>
-        //                     <div class='iteminfo'>
-        //                         <div class="title">${ele.title}</div>
-        //                         <div class="venue">${ele.where}</div>
-        //                         <div class="showtime">${ele.time}</div>
-        //                         <div class="price">
-        //                         ${ele.price}
-        //                             <span>起</span>
-        //                         </div>
-        //                     </div>
-        //                 </a>
-        //             `
-        //             if (this.flag = 6) return false
-        //         })
+        //登录用户
+        denglu() {
+            if ($.cookie('username') && $.cookie('password')) {//cookie存在
+                $('.sea .right .user').hide()
+                $('.sea .right .login').show()
+                $('.sea .right .login span').html(`${$.cookie('username')}`)
+            }
+            $('.sea .right .login a').on('click', () => {
+                $('.sea .right .user').show()
+                $('.sea .right .login').hide()
+                $.cookie('username', '', {
+                    expires: -1,
+                    path: '/'
+                })
+                $.cookie('password', '', {
+                    expires: -1,
+                    path: '/'
+                })
+            })
+        }
+        //轮播图
+        banner() {
+            const $lunbo = $('.banner')
+            const $piclist = $('.banner .box a')
+            const $btnlist = $('.banner ul li')
+            const $left = $('.banner .left')
+            const $right = $('.banner .right')
+            let $num = 0
+            let $time1 = null
+            let $time2 = null
 
-        //         this.list.html($strhtml)
-        //     })
-        // }
+            //圆圈
+            $btnlist.on('click', function () {
+                $num = $(this).index()
+                clearTimeout($time1)
+                $time1 = setTimeout(() => {
+                    tabswitch()
+                }, 100)
+            })
+
+            //左右箭头
+            $right.on('click', () => {
+                $num++
+                if ($num > $btnlist.length - 1) $num = 0//到最后一张让它回到0
+                tabswitch()
+            })
+            $left.on('click', () => {
+                $num--
+                if ($num < 0) $num = $btnlist.length - 1
+                tabswitch()
+            })
+
+            //自动
+            $time2 = setInterval(() => {
+                $right.click()
+            }, 2000)
+
+            //鼠标移入
+            $lunbo.hover(() => {
+                clearInterval($time2)
+            }, () => {
+                $time2 = setInterval(() => {
+                    $right.click()
+                }, 2000)
+            })
+
+            //封装
+            function tabswitch() {
+                $btnlist.eq($num).addClass('ac').siblings('li').removeClass('ac')
+                $piclist.eq($num).stop(true).animate({ opacity: 1 }).siblings('a').stop(true).animate({ opacity: 0 })
+            }
+        }
     }
     new Index().init()
 }(jQuery)

@@ -2,7 +2,7 @@
  * @Author: DongBingnan
  * @Date: 2020-08-07 11:29:23
  * @LastEditors: DongBingnan
- * @LastEditTime: 2020-08-11 16:49:43
+ * @LastEditTime: 2020-08-12 16:24:49
  * @Description: file content
  * @FilePath: \wampRoot\damaiwang\src\index1.html
 -->
@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/foot.css">
     <script src="script/jquery-1.10.1.min.js"></script>
+    <script src="script/jquery.cookie.js"></script>
 
 
 </head>
@@ -55,10 +56,15 @@
             </div>
             <div class="right">
                 <div class="user">
-                    <a href="./enter.html" target="_blank"><img class='lazy'
-                            data-original="https://img.alicdn.com/tfs/TB14UKCGQyWBuNjy0FpXXassXXa-54-54.png"
-                            alt="">登录</a>
+                    <a href="./enter.html" class='denglu'><img class='lazy'
+                            src="https://img.alicdn.com/tfs/TB14UKCGQyWBuNjy0FpXXassXXa-54-54.png" alt="">登录</a>
                 </div>
+
+                <div class="login" style="display: none;">
+                    <span></span>
+                    <a href="javascript:;">退出</a>
+                </div>
+
                 <div class="download">
                     <a href=""><img class='lazy'
                             data-original="https://img.alicdn.com/tfs/TB1A9eIGKuSBuNjy1XcXXcYjFXa-54-54.png"
@@ -82,8 +88,14 @@
     <div class="main">
         <!-- banner -->
         <div class="banner">
-            <a href="http://10.31.152.66/damaiwang/dist/index1.html" target="_blank"><img class='lazy'
-                    data-original="https://gw.alicdn.com/tfs/TB1KiMMq7L0gK0jSZFtXXXQCXXa-1200-320.png" alt=""></a>
+            <div class="box">
+                <a href="http://10.31.152.66/damaiwang/dist/index1.html" target="_blank"><img class='lazy'
+                        data-original="https://gw.alicdn.com/tfs/TB1KiMMq7L0gK0jSZFtXXXQCXXa-1200-320.png" alt="">
+                </a>
+                <a href="http://10.31.152.66/damaiwang/dist/index1.html" target="_blank"><img class='lazy'
+                        data-original="https://img.alicdn.com/tps/i4/TB1P.SuPND1gK0jSZFsSuvldVXa.jpg" alt="">
+                </a>
+            </div>
             <div class="left">
                 <span></span>
             </div>
@@ -91,6 +103,7 @@
                 <span></span>
             </div>
             <ul>
+                <li class='ac'></li>
                 <li></li>
             </ul>
         </div>

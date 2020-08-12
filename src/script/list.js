@@ -2,7 +2,7 @@
  * @Author: DongBingnan
  * @Date: 2020-07-30 15:04:17
  * @LastEditors: DongBingnan
- * @LastEditTime: 2020-08-11 15:46:35
+ * @LastEditTime: 2020-08-12 17:07:00
  * @Description: file content
  * @FilePath: \wampRoot\damaiwang\src\script\list.js
  */
@@ -14,6 +14,11 @@
             this.list = $('.itembox')
         }
         init() {
+            this.Renderdiv()
+            this.show()
+            this.top()
+        }
+        Renderdiv() {
             $.ajax({
                 url: 'http://10.31.152.66/damaiwang/php/list.php'
             }).done((data) => {
@@ -64,6 +69,21 @@
                 })
 
                 this.list.html($strhtml)
+            })
+        }
+        // 显示
+        show() {
+            $(window).on('scroll', () => {
+                $(window).scrollTop() > 120 ? $('.sidebar .top').show() : $('.sidebar .top').hide()
+
+            })
+        }
+        //回到顶部
+        top() {
+            $('.sidebar .top').on('click', function () {
+                console.log(2)
+                $('html').animate({ scrollTop: 0 })
+
             })
         }
     }
