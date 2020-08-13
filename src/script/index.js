@@ -2,7 +2,7 @@
  * @Author: DongBingnan
  * @Date: 2020-08-11 11:10:54
  * @LastEditors: DongBingnan
- * @LastEditTime: 2020-08-12 16:18:16
+ * @LastEditTime: 2020-08-13 15:53:22
  * @Description: file content
  * @FilePath: \wampRoot\damaiwang\src\script\index.js
  */

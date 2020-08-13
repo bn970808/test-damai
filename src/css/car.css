@@ -454,7 +454,8 @@ i {
     position: relative;
     overflow: hidden;
     height: 20px;
-    border: 1px solid #cacbcb;
+    width: 86px;
+    /* border: 1px solid #cacbcb; */
 }
 
 .quantity-form a {
@@ -462,27 +463,29 @@ i {
     height: 18px;
     line-height: 18px;
     padding: 1px 0;
-    width: 16px;
+    width: 24px;
     text-align: center;
-    color: #666;
-    margin: 0;
-    background: #fff;
+    color: #fff;
+    margin: 0 3px;
+    background: rgb(165, 160, 160);
     float: left;
 }
-.quantity-form .quantity-down {
+/* .quantity-form .quantity-down {
     border-right: 1px solid #cacbcb;
-}
+} */
 
-.quantity-form .quantity-add {
+/* .quantity-form .quantity-add {
     border-left: 1px solid #cacbcb;
-}
+} */
 
 .quantity-form input {
-    width: 44px;
+    width: 22px;
     height: 22px;
     float: left;
     text-align: center;
     background: white;
+    border: none;
+    outline: none;
 }
 
 .quantity-text {

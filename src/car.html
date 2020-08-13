@@ -2,7 +2,7 @@
  * @Author: DongBingnan
  * @Date: 2020-08-10 13:59:09
  * @LastEditors: DongBingnan
- * @LastEditTime: 2020-08-11 15:12:15
+ * @LastEditTime: 2020-08-13 16:51:25
  * @Description: file content
  * @FilePath: \wampRoot\damaiwang\src\car.html
 -->
@@ -65,7 +65,55 @@
                                         <div class="cart-tbody">
                                             <!-- 显示购物车列表 -->
                                             <div class="item-list">
-
+                                                <!-- <div class="goods-item goods-item-sele" style="display: block;">
+                                                    <div class="goods-info">
+                                                        <div class="cell b-checkbox">
+                                                            <div class="cart-checkbox">
+                                                                <input type="checkbox" checked="" name="" id=""
+                                                                    value="" />
+                                                                <span class="line-circle"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell b-goods">
+                                                            <div class="goods-name">
+                                                                <div class="goods-pic">
+                                                                    <a href=""><img
+                                                                            src="https://img.alicdn.com/bao/uploaded/https://img.alicdn.com/imgextra/i3/2251059038/O1CN0185r0YO2GdSFxWEh9j_!!https://img.alicdn.com/bao/uploaded/i4/2251059038/O1CN01L70FVl2GdSG2wpwyE_!!0-item_pic.jpg_q60.jpg_.webp"
+                                                                            alt="" /></a>
+                                                                </div>
+                                                                <div class="goods-msg">
+                                                                    <div class="goods-d-info">
+                                                                        <a href="">2020舟山东海音乐节</a>
+                                                                    </div>
+                                                                    <div class="goods-ex">
+                                                                        <span class="promise"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell b-props">
+                                                            <div class="prop-text"></div>
+                                                        </div>
+                                                        <div class="cell b-price">
+                                                            <strong>￥200元</strong>
+                                                            <div class="sales-promotion-dropdown">
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell b-quantity">
+                                                            <div class="quantity-form">
+                                                                <a class="quantity-down" href="javascript:void(0)">-</a>
+                                                                <input type="text" value="1" />
+                                                                <a class="quantity-add" href="javascript:void(0)">+</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell b-sum">
+                                                            <strong>算数结果</strong>
+                                                        </div>
+                                                        <div class="cell b-action">
+                                                            <a href="javascript:void(0)">删除</a>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
                                             </div>
                                         </div>
                                     </div>
@@ -88,14 +136,9 @@
                                 <div class="price-sum">
                                     <span class="txt">总价（不含运费）：</span>
                                     <span class="totalprice">￥0.00</span>
-                                    <span class="txt">已节省：</span>
-                                    <span class="totalsave">-￥0.00</span>
+
                                 </div>
-                                <div class="amount-sum">
-                                    已选择
-                                    <em>0</em> 件商品
-                                    <b></b>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -107,8 +150,26 @@
     <div class="footer"></div>
     <script>$(".footer").load("./foot.html")</script>
     <!-- sidebar -->
-    <div class="sidebar"></div>
-    <script>$(".sidebar").load("./sidebar.html")</script>
+    <div class="sidebar">
+        <div class="item">
+            <a href="">
+                <div style="background-position:  3px -30px;"></div>
+                <p>在线客服</p>
+            </a>
+        </div>
+        <div class="item">
+            <a href="">
+                <div style="background-position:  0px 4px;"></div>
+                <p>APP下载</p>
+            </a>
+        </div>
+        <div class=" item top">
+            <a href="">
+                <div style="background-position:  4px -65px;"></div>
+                <p>回到顶部</p>
+            </a>
+        </div>
+    </div>
     <script src="script/car.js"></script>
 </body>
 

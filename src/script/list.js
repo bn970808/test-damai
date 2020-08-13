@@ -2,7 +2,7 @@
  * @Author: DongBingnan
  * @Date: 2020-07-30 15:04:17
  * @LastEditors: DongBingnan
- * @LastEditTime: 2020-08-12 17:07:00
+ * @LastEditTime: 2020-08-13 17:13:37
  * @Description: file content
  * @FilePath: \wampRoot\damaiwang\src\script\list.js
  */
@@ -16,7 +16,7 @@
         init() {
             this.Renderdiv()
             this.show()
-            this.top()
+            this.topback()
         }
         Renderdiv() {
             $.ajax({
@@ -30,7 +30,7 @@
                     <div class='box'>
         <div class='box-l'>
             <a href='./detail.html?sid=${ele.sid}'>
-                <img src='${ele.url}'>
+                <img class='lazy' data-original= '${ele.url}' alt=''>
             </a>
         </div>
         <div class='box-r'>
@@ -60,7 +60,7 @@
 
             <div class='price'>
                 <a href='./detail.html?sid=${ele.sid}'>
-                    <span>${ele.price}</span>
+                    <span>￥${ele.price}元</span>
                 </a>
             </div>
         </div>
@@ -69,6 +69,10 @@
                 })
 
                 this.list.html($strhtml)
+                //懒加载
+                $(function () {
+                    $("img.lazy").lazyload({ effect: "fadeIn" });
+                });
             })
         }
         // 显示
@@ -79,11 +83,9 @@
             })
         }
         //回到顶部
-        top() {
-            $('.sidebar .top').on('click', function () {
-                console.log(2)
+        topback() {
+            $('.sidebar .top').on('click', () => {
                 $('html').animate({ scrollTop: 0 })
-
             })
         }
     }
