@@ -2,7 +2,7 @@
  * @Author: DongBingnan
  * @Date: 2020-08-11 09:15:30
  * @LastEditors: DongBingnan
- * @LastEditTime: 2020-08-13 15:56:13
+ * @LastEditTime: 2020-08-13 20:22:32
  * @Description: file content
  * @FilePath: \wampRoot\damaiwang\src\script\detail.js
  */
@@ -144,7 +144,9 @@
                                 expires: 7,
                                 path: '/'
                             })
-                            this.arrprice.push($(".total span").html().substring(1, $(".total span").html().length - 1))
+                            //($('.piaodang #ac').attr('class'))=='a'?($dataArr.price):($dataArr.price*2)  单价
+                            // this.arrprice.push($(".total span").html().substring(1, $(".total span").html().length - 1))
+                            this.arrprice.push(($('.piaodang #ac').attr('class')) == 'a' ? ($dataArr.price) : ($dataArr.price * 2))
                             $.cookie('cookieprices', this.arrprice, {
                                 expires: 7,
                                 path: '/'
@@ -159,7 +161,9 @@
                                 expires: 7,
                                 path: '/'
                             })
-                            this.arrprice[index] = $(".total span").html().substring(1, $(".total span").html().length - 1)
+                            // this.arrprice[index] = $(".total span").html().substring(1, $(".total span").html().length - 1)
+                            this.arrprice[index] = ($('.piaodang #ac').attr('class')) == 'a' ? ($dataArr.price) : ($dataArr.price * 2)
+
                             $.cookie('cookieprices', this.arrprice, {
                                 expires: 7,
                                 path: '/'

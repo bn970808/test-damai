@@ -2,7 +2,7 @@
  * @Author: DongBingnan
  * @Date: 2020-08-10 13:59:09
  * @LastEditors: DongBingnan
- * @LastEditTime: 2020-08-13 16:51:25
+ * @LastEditTime: 2020-08-14 11:20:05
  * @Description: file content
  * @FilePath: \wampRoot\damaiwang\src\car.html
 -->
@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/head.css">
     <link rel="stylesheet" href="css/sidebar.css">
     <script src="script/jquery-1.10.1.min.js"></script>
+    <script src="./script/jquery.cookie.js"></script>
 
 </head>
 
@@ -49,7 +50,8 @@
                                 <div class="cart-thead">
                                     <div class="cart-col t-checkbox">
                                         <div class="cart-checkbox">
-                                            <input type="checkbox" checked="" name="" id="" class="allsel" value="" />
+                                            <input type="checkbox" checked="" name="" id="" class="allselect"
+                                                value="" />
                                             全选
                                         </div>
                                     </div>
@@ -68,7 +70,7 @@
                                                 <!-- <div class="goods-item goods-item-sele" style="display: block;">
                                                     <div class="goods-info">
                                                         <div class="cell b-checkbox">
-                                                            <div class="cart-checkbox">
+                                                            <div class="one-checkbox">
                                                                 <input type="checkbox" checked="" name="" id=""
                                                                     value="" />
                                                                 <span class="line-circle"></span>
@@ -123,7 +125,7 @@
                         <div id="cart-floatbar">
                             <div class="select-all">
                                 <div class="cart-checkbox">
-                                    <input type="checkbox" checked="" name="" id="" class="allsel" value="" /> 全选
+                                    <input type="checkbox" checked="" name="" id="" class="allselect2" value="" /> 全选
                                 </div>
                             </div>
                             <div class="operation">
